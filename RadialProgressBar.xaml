@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="CircularProgress.RadialProgressBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+    xmlns:local="clr-namespace:CircularProgress"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="CPB"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <local:ValueToAngle x:Key="valueToAngle" />
+    </UserControl.Resources>
+    <Grid>
+        <Ellipse
+            x:Name="OuterRing"
+            Margin="0"
+            Fill="{Binding ElementName=CPB, Path=OuterBrush}"
+            Stroke="{StaticResource EdgeBrush}" />
+        <ed:Arc
+            x:Name="Indicator"
+            ArcThickness="{Binding ElementName=CPB, Path=RingThickness, FallbackValue=28}"
+            ArcThicknessUnit="Pixel"
+            EndAngle="{Binding Converter={StaticResource valueToAngle}, ElementName=CPB, Path=Value}"
+            Fill="{Binding ElementName=CPB, Path=RingBrush}"
+            StartAngle="0"
+            Stretch="None" />
+        <Ellipse
+            x:Name="InnerRing"
+            Margin="{Binding ElementName=CPB, Path=RingThickness, FallbackValue=28}"
+            Fill="{Binding ElementName=CPB, Path=InnerBrush}"
+            Stroke="{StaticResource EdgeBrush}" />
+    </Grid>
+</UserControl>

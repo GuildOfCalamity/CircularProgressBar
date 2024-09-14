@@ -1,0 +1,98 @@
+﻿<Application
+    x:Class="CircularProgress.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CircularProgress"
+    xmlns:properties="clr-namespace:CircularProgress.Properties"
+    DispatcherUnhandledException="Application_DispatcherUnhandledException"
+    Exit="Application_Exit"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <properties:Settings x:Key="Settings" />
+
+            <LinearGradientBrush x:Key="ProgressBrush" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#FF444444" />
+                        <GradientStop Offset="1.0" Color="#FF888888" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="EdgeBrush" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#45404040" />
+                        <GradientStop Offset="1.0" Color="#45606060" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="TextBrush" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#DFB0B0B0" />
+                        <GradientStop Offset="1.0" Color="#DF606060" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ProgressBrushLow" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#8516F600" />
+                        <GradientStop Offset="1.0" Color="#85164600" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ProgressBrushLowMedium" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#8516F600" />
+                        <GradientStop Offset="1.0" Color="#85F6F600" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ProgressBrushMedium" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#85F6F600" />
+                        <GradientStop Offset="1.0" Color="#85AF6600" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ProgressBrushMediumHigh" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#85FFB600" />
+                        <GradientStop Offset="1.0" Color="#85FF4600" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ProgressBrushHigh" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#85FF4600" />
+                        <GradientStop Offset="1.0" Color="#85F76600" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ProgressBrushExtreme" StartPoint="1,0" EndPoint="0,1">
+                <GradientBrush.GradientStops>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0.0" Color="#85FF1000" />
+                        <GradientStop Offset="1.0" Color="#85FF3900" />
+                    </GradientStopCollection>
+                </GradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
