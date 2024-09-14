@@ -1,6 +1,6 @@
 ## 💻 WPF - CircularProgressBar
 
-![Example](ScreenShot.png)
+![Example](Screenshot.png)
 
 ### 📝 v1.0.0.0 - March 2022
 
