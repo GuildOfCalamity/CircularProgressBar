@@ -1,10 +1,10 @@
 ## 💻 WPF - CircularProgressBar
 
-![Example Picture](./ScreenShot.png)
+![Example](ScreenShot.png)
 
 ### 📝 v1.0.0.0 - March 2022
 
-* A transparent CPU monitor for your desktop using a home-brew radial progress bar control.
+* A translucent CPU monitor for your desktop using a home-brew radial progress bar control.
 	- .NET Framework v4.8
 
 ## 🧾 License/Warranty
